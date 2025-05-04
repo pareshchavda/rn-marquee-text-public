@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "esnext",
+      "lib": ["es6", "dom"],
+      "jsx": "react-native",
+      "declaration": true,
+      "declarationDir": "dist",
+      "outDir": "dist",
+      "strict": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
+      "isolatedModules": true,
+      "resolveJsonModule": true,
+      "noEmit": false
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist", "**/__tests__/*"]
+  }
+  
