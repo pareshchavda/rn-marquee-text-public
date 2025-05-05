@@ -6,46 +6,69 @@ import MarqueeText from 'rn-marquee-text';
 export default function App() {
   return (
     <SafeAreaView style={{ flex: 1, padding: 16, gap: 24 }}>
-      <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Marquee Text Demo</Text>
+      <Text style={{ fontSize: 20, fontWeight: 'bold' }}>
+        Marquee Text Demo
+      </Text>
 
       <View style={{ width: 250, borderRadius: 8, overflow: 'hidden' }}>
         <MarqueeText
-          text="This is a long scrolling text that demonstrates the marquee functionality"
           speed={80}
-        />
+          backgroundColor="#1a365d"
+          textColor="#f0f4f8"
+          fontSize={14}
+          direction="horizontal">
+          <Text style={styles.cardText}>
+            This is a long scrolling text that demonstrates the marquee
+            functionality
+          </Text>
+        </MarqueeText>
       </View>
 
       <View style={{ width: 200, borderRadius: 8, overflow: 'hidden' }}>
         <MarqueeText
-          text="Faster scrolling example with different colors"
           speed={120}
           backgroundColor="#1a365d"
           textColor="#f0f4f8"
           fontSize={14}
-        />
+          direction="horizontal">
+          <Text style={styles.cardText}>
+            Faster scrolling example with different colors
+          </Text>
+        </MarqueeText>
       </View>
 
       <View style={{ width: '100%', borderRadius: 8, overflow: 'hidden' }}>
         <MarqueeText
-          text="Breaking News: This is a full-width marquee text component that scrolls horizontally"
           speed={100}
           backgroundColor="#7b341e"
           textColor="#fffaf0"
           fontSize={18}
-        />
+          direction="horizontal">
+          <Text style={styles.cardText}>
+            Breaking News: This is a full-width marquee text component that
+            scrolls horizontally.
+          </Text>
+        </MarqueeText>
       </View>
 
-      <View style={{ marginVertical: 10 }}>
+      <View style={{ marginVertical: 10, width: 250 }}>
         <MarqueeText
-          text="This text will scroll horizontally with bounce effect. It will pause for 2 seconds at each end."
           speed={50}
           backgroundColor="#fff"
           textColor="#0000ff"
           fontSize={16}
-        />
+          direction="horizontal">
+          <Text style={styles.cardText}>
+            This text will scroll horizontally with bounce effect. It will pause
+            for 2 seconds at each end.
+          </Text>
+        </MarqueeText>
       </View>
 
-      <AutoScroll endPauseDuration={2000} style={styles.cardScroller} direction="horizontal">
+      <AutoScroll
+        endPauseDuration={2000}
+        style={styles.cardScroller}
+        direction="horizontal">
         <View style={styles.contentContainer}>
           {[1, 2, 3, 4, 5].map((item) => (
             <View key={item} style={styles.card}>
@@ -54,8 +77,14 @@ export default function App() {
           ))}
         </View>
       </AutoScroll>
-      <AutoScroll endPauseDuration={2000} style={styles.cardScroller} direction="horizontal">
-      <Text style={styles.cardText}>This text will scroll horizontally with bounce effect and pause for 2 seconds at each end 🎉</Text>
+      <AutoScroll
+        endPauseDuration={2000}
+        style={styles.cardScroller}
+        direction="horizontal">
+        <Text style={styles.cardText}>
+          This text will scroll horizontally with bounce effect and pause for 2
+          seconds at each end 🎉
+        </Text>
       </AutoScroll>
     </SafeAreaView>
   );
